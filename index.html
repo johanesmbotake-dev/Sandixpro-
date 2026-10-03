@@ -1,94 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SANDIX | Web Dev + AI Automation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Inter',sans-serif;background:#000;color:#fff}
-    .top{background:#000;padding:12px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #222;position:sticky;top:0;z-index:9}
-    .logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px}
-    .logo img{height:46px;border-radius:12px;object-fit:contain}
-    .hero{padding:50px 5% 20px;text-align:center}
-    .hero h1{font-size:42px;line-height:1.1;font-family:'Space Grotesk',sans-serif}
-    .hero h1 span{color:#00D1FF}
-    .hero p{color:#aaa;margin-top:10px}
-    .sec{padding:28px 5%}
-    .sec h2{font-family:'Space Grotesk',sans-serif;font-size:26px;margin-bottom:14px;text-align:center}
-    .black{background:#000}
-    .white{background:#fff;color:#111}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .card{background:#111;border:1px solid #222;border-radius:14px;padding:16px}
-    .white .card{background:#f5f5f5;border-color:#e5e5e5}
-    .price{color:#00D1FF;font-weight:700;margin-top:6px}
-    .btn{display:inline-block;background:#00D1FF;color:#000;padding:9px 16px;border-radius:20px;font-weight:700;text-decoration:none;margin-top:8px;font-size:12px}
-    .cgrid{display:grid;gap:10px}
-    .citem{background:#111;border:1px solid #222;border-radius:12px;padding:14px;display:flex;justify-content:space-between;align-items:center}
-    .tally{width:100%;height:480px;border:0;border-radius:14px}
-    .testi{display:grid;gap:10px}
-    .map{width:100%;height:280px;border:0;border-radius:14px;margin-top:12px}
-    .foot{background:#000;border-top:1px solid #222;padding:18px;text-align:center;color:#666;font-size:11px}
-    @media(min-width:700px){.grid{grid-template-columns:1fr 1fr}.testi{grid-template-columns:1fr 1fr 1fr}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SANDIX - Web Developer & AI Automation</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,sans-serif}
+body{background:#000;color:#fff}
+.logo{font-size:28px;font-weight:900;letter-spacing:1px;padding:18px 20px;background:#fff;color:#111}
+.logo span{color:#00BFFF}
+.hero{text-align:center;padding:40px 20px 20px}
+.hero h1{font-size:42px;font-weight:900;line-height:1.1}
+.hero h1 b{color:#00BFFF}
+.hero p{color:#aaa;margin-top:12px;font-size:15px}
+.section{padding:20px;background:#000}
+.section h2{text-align:center;font-size:22px;font-weight:900;margin:30px 0 16px;letter-spacing:1px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:#111;border:1px solid #222;border-radius:16px;padding:18px}
+.card h3{font-size:15px;margin-bottom:8px}
+.card p{font-size:13px;color:#aaa;line-height:1.5}
+.about{background:#f8f9ff;color:#111;border-radius:20px;padding:28px 18px;margin:20px 12px}
+.about h2{font-size:22px;line-height:1.2;text-align:left;margin-bottom:14px}
+.about p{font-size:14px;line-height:1.7;margin-bottom:12px;color:#333}
+.toggle-wrap{text-align:center;margin:20px 12px}
+.toggle-btn{background:#00BFFF;color:#000;font-weight:900;padding:14px 28px;border:none;border-radius:30px;font-size:16px;cursor:pointer;width:100%;max-width:320px}
+.form-box{display:none;margin:14px 12px;background:#fff;border-radius:16px;padding:12px}
+.map{height:240px;background:#222;border-radius:16px;margin:20px 12px;display:flex;align-items:center;justify-content:center;color:#666}
+.footer{text-align:center;padding:20px;color:#666;font-size:12px}
+</style>
 </head>
 <body>
 
-  <div style="font-weight:900;color:#fff;font-size:20px">SANDIX</div>
-    </div>
-    <div style="color:#aaa;font-size:13px">+2347069918890</div>
-  </div>
+<div class="logo">SANDI<span>X</span></div>
 
-  <!-- 2. HERO -->
-  <div class="hero">
-    <h1>WEB DEVELOPER<br>AND AI <span>AUTOMATION</span></h1>
-    <p>We build fast websites + AI chatbots that capture customers 24/7</p>
-  </div>
-
-  <!-- 3. SERVICES (BLACK) -->
-  <div class="sec black">
-    <h2>OUR SERVICES</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>🌐 Website Development</h3>
-        <div style="margin-top:18px;background:#fff;padding:14px;border-radius:16px">
-<h3 style="text-align:center;margin:0 0 12px;color:#111;font-weight:800">🚀 ORDER YOUR WEBSITE + AI AUTOMATION</h3>
-<iframe src="https://tally.so/r/68o0NP" width="100%" height="650" frameborder="0" style="border:0;border-radius:12px" title="SANDIX Order Form"></iframe>
-        </div>
-<h2 style="text-align:center;font-size:28px;margin:0 0 22px">ABOUT SANDIX</h2>
-<div style="max-width:700px;margin:0 auto;background:#f8f9fa;padding:22px;border-radius:16px;border-left:4px solid #00D1FF;line-height:1.7;color:#333">
-<p><b>SANDIX is your growth partner, not just a web designer.</b> We are a Lagos-based digital agency on a mission to help Nigerian small businesses — salons, restaurants, shops, schools, clinics — stop losing customers and start making money online.</p>
-<p>We build <b>super-fast, mobile-first websites</b> that load in 2 seconds and turn visitors into paying customers. But we don't stop there. We integrate <b>AI automation that replies instantly on WhatsApp & Telegram</b> 24/7, so you never miss a sale even while you sleep.</p>
-<p>Why SANDIX? Because we understand hustle. <b>Affordable ($100-$250), delivery in 3-5 days, 1-year free support, and we speak your language.</b> From Ogba to Lekki, Lagos to Abuja and beyond — 50+ businesses trust us. We don't just build websites, we build customer machines.</p>
-<p style="margin:15px 0 0"><b>Ready to get more customers?</b> Your competitors are already online. Let's put you ahead.</p>
+<div class="hero">
+<h1>WEB DEVELOPER<br>AND AI<br><b>AUTOMATION</b></h1>
+<p>We build fast websites + AI chatbots that capture customers 24/7</p>
 </div>
-  </div>
 
-  <!-- 6. TESTIMONIES (WHITE) -->
-  <div class="sec white">
-    <h2>CLIENT TESTIMONIES </h2>
-    <div class="testi">
-      <div class="card">⭐⭐⭐⭐⭐ "SANDIX built my salon website in 2 days. Customers now book online. $120 worth it!" - Blessing, Lagos</div>
-      <div class="card">⭐⭐⭐⭐⭐ "AI bot replies my customers at night. Sales doubled!" - Chidi, Abuja</div>
-      <div class="card">⭐⭐⭐⭐⭐ "Very fast and professional. My bakery site loads in 1 sec" - Amaka, PH</div>
-      <div class="card">⭐⭐⭐⭐⭐ "Telegram bot @sandixauto123bot handles 100+ orders daily for me" - Musa, Kano</div>
-      <div class="card">⭐⭐⭐⭐⭐ "Best $150 I spent. No more missing chats" - Tolu, Ibadan</div>
-      <div class="card">⭐⭐⭐⭐⭐ "They even added map and contact form. Perfect!" - Grace, Enugu</div>
-      <div class="card">⭐⭐⭐⭐⭐ "Website + bot combo = game changer" - Emeka, Owerri</div>
-      <div class="card">⭐⭐⭐⭐⭐ "Support is fast. They fix anything same day" - Funke, Lagos</div>
-      <div class="card">⭐⭐⭐⭐⭐ "My customers love the fast site. SANDIX na baba!" - Yusuf, Kaduna</div>
-    </div>
-  </div>
+<div class="section">
+<h2>OUR SERVICES</h2>
+<div class="grid">
+<div class="card"><h3>🌐 Website Development</h3><p>Super-fast, mobile-first websites that load in 2 seconds and convert visitors to buyers.</p></div>
+<div class="card"><h3>🤖 AI Automation</h3><p>AI that replies WhatsApp/IG, books appointments & closes sales while you sleep.</p></div>
+<div class="card"><h3>📈 Sales Funnels</h3><p>Funnels that turn cold traffic into hot paying customers on autopilot.</p></div>
+<div class="card"><h3>⚡ Chatbot Setup</h3><p>24/7 AI chatbot to capture leads, answer questions & never miss a sale.</p></div>
+</div>
 
-  <!-- 7. ADDRESS (BLACK) - BOTTOM -->
-  <div class="sec black">
-    <h2>📍 OUR ADDRESS</h2>
-    <p style="text-align:center;color:#aaa">25 MTN Street, Off College Road, Ifako-Ijaiye, Ogba, Lagos, Nigeria</p>
-    <iframe class="map" src="https://maps.google.com/maps?q=25%20MTN%20Street%20Ogba%20Lagos&z=15&output=embed"></iframe>
-  </div>
+<div class="about">
+<h2>SANDI<span style="color:#00BFFF">X</span> — We Build Websites & AI AUTOMATION For Businesses Worldwide.</h2>
+<p><b>SANDIX is your global growth partner, not just a designer.</b> We help businesses worldwide — from startups in Texas, brands in London, clinics in Dubai, to shops in Lagos — build digital systems that print money 24/7.</p>
+<p><b>1. HIGH-CONVERTING WEBSITES:</b> No slow templates. We build fast, SEO-optimized, mobile-first websites engineered to turn visitors into paying customers.</p>
+<p><b>2. AI BUSINESS AUTOMATION:</b> We install AI that handles your business non-stop — instant DM replies, lead capture, appointment booking, follow-ups & abandoned cart recovery.</p>
+<p>Most agencies stop at design. We build the full money machine: <b>Website + Funnel + AI + Automation.</b> No borders. No limits. Whether you're in USA, UK, UAE or Nigeria — if you're serious about growth, SANDIX is your team.</p>
+</div>
 
-  <div class="foot">© 2026 SANDIX - Web Dev & AI Automation | +2347069918890 | sandixauto123bot</div>
+<h2>CLIENT TESTIMONIES</h2>
+<div class="grid">
+<div class="card"><p>⭐⭐⭐⭐⭐<br>"SANDIX built my salon website in 3 days. Customers now book online. $120 worth it!" - Blessing, Lagos</p></div>
+<div class="card"><p>⭐⭐⭐⭐⭐<br>"AI bot replies my customers at night. I wake up to sales!" - Ahmed, Dubai</p></div>
+</div>
+</div>
+
+<div class="toggle-wrap">
+<button class="toggle-btn" onclick="document.getElementById('formBox').style.display = document.getElementById('formBox').style.display==='block'?'none':'block'">📝 Fill Form To Order</button>
+</div>
+
+<div id="formBox" class="form-box">
+<h3 style="color:#111;text-align:center;margin:0 0 12px;font-weight:800">🚀 ORDER YOUR WEBSITE + AI AUTOMATION</h3>
+<iframe src="https://tally.so/r/68o0NP" width="100%" height="650" frameborder="0" style="border:0;border-radius:12px" title="SANDIX Order Form"></iframe>
+</div>
+
+<div class="map">📍 Global Service - We Work Worldwide<br>Lagos • London • Dubai • New York</div>
+
+<div class="footer">© 2026 SANDIX — Web Developer & AI Automation Agency. Worldwide Service.</div>
 
 </body>
 </html>
