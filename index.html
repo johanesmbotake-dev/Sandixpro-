@@ -6,72 +6,103 @@
 <title>SANDIX - Web Developer & AI Automation</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,sans-serif}
-body{background:#000;color:#fff}
-.logo{font-size:28px;font-weight:900;letter-spacing:1px;padding:18px 20px;background:#fff;color:#111}
+body{background:#fff}
+.header{background:#fff;padding:16px 18px;position:sticky;top:0;z-index:99;border-bottom:1px solid #eee}
+.logo{font-size:28px;font-weight:900;color:#111;letter-spacing:1px}
 .logo span{color:#00BFFF}
-.hero{text-align:center;padding:40px 20px 20px}
-.hero h1{font-size:42px;font-weight:900;line-height:1.1}
-.hero h1 b{color:#00BFFF}
-.hero p{color:#aaa;margin-top:12px;font-size:15px}
-.section{padding:20px;background:#000}
-.section h2{text-align:center;font-size:22px;font-weight:900;margin:30px 0 16px;letter-spacing:1px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.card{background:#111;border:1px solid #222;border-radius:16px;padding:18px}
-.card h3{font-size:15px;margin-bottom:8px}
-.card p{font-size:13px;color:#aaa;line-height:1.5}
-.about{background:#f8f9ff;color:#111;border-radius:20px;padding:28px 18px;margin:20px 12px}
-.about h2{font-size:22px;line-height:1.2;text-align:left;margin-bottom:14px}
-.about p{font-size:14px;line-height:1.7;margin-bottom:12px;color:#333}
-.toggle-wrap{text-align:center;margin:20px 12px}
-.toggle-btn{background:#00BFFF;color:#000;font-weight:900;padding:14px 28px;border:none;border-radius:30px;font-size:16px;cursor:pointer;width:100%;max-width:320px}
-.form-box{display:none;margin:14px 12px;background:#fff;border-radius:16px;padding:12px}
-.map{height:240px;background:#222;border-radius:16px;margin:20px 12px;display:flex;align-items:center;justify-content:center;color:#666}
-.footer{text-align:center;padding:20px;color:#666;font-size:12px}
+.black{background:#000;color:#fff;padding:30px 14px 30px;text-align:center}
+.black h1{font-size:42px;font-weight:900;line-height:1.1}
+.black h1 b{color:#00BFFF}
+.black .sub{color:#aaa;margin:14px 0 30px;font-size:14px}
+.black h2{font-size:20px;font-weight:900;margin:28px 0 14px;letter-spacing:1px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+.card{background:#111;border:1px solid #222;border-radius:18px;padding:16px}
+.card h3{font-size:14px;margin-bottom:8px;font-weight:800}
+.card p{font-size:12.5px;color:#aaa;line-height:1.5}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.contact-card{background:#0a0a0a;border:1px solid #00BFFF;border-radius:18px;padding:16px;text-align:center}
+.contact-card a{color:#00BFFF;text-decoration:none;font-weight:800;font-size:14px}
+.toggle-btn{margin:26px auto 0;background:#00BFFF;color:#000;font-weight:900;padding:14px 28px;border:none;border-radius:30px;font-size:15px;cursor:pointer;width:100%;max-width:340px;display:block}
+.form-box{display:none;margin:18px 0 0;background:#fff;border-radius:16px;padding:10px}
+.white{background:#fff;color:#111;padding:24px 14px}
+.about{background:#f8f9ff;border:1px solid #eef0ff;border-radius:20px;padding:22px 16px;margin-bottom:24px}
+.about h2{font-size:20px;font-weight:900;line-height:1.25;margin-bottom:12px;text-align:left}
+.about p{font-size:13.5px;line-height:1.7;color:#333;margin-bottom:10px}
+.test-grid{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:600px){.test-grid{grid-template-columns:1fr 1fr 1fr}}
+.test-card{background:#fff;border:1px solid #eee;border-radius:16px;padding:14px;font-size:12.5px;line-height:1.5;color:#333;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.address{margin-top:24px;background:#111;color:#fff;border-radius:18px;padding:18px}
+.address h3{font-size:16px;margin-bottom:8px}
+.address p{font-size:13px;color:#aaa;line-height:1.6}
+.map{margin-top:12px;height:260px;border-radius:14px;overflow:hidden;border:1px solid #222}
+.map iframe{width:100%;height:100%;border:0}
+.footer{text-align:center;padding:18px;color:#888;font-size:11px;background:#fff}
 </style>
 </head>
 <body>
 
-<div class="logo">SANDI<span>X</span></div>
+<div class="header"><div class="logo">SANDI<span>X</span></div></div>
 
-<div class="hero">
-<h1>WEB DEVELOPER<br>AND AI<br><b>AUTOMATION</b></h1>
-<p>We build fast websites + AI chatbots that capture customers 24/7</p>
-</div>
+<div class="black">
+<h1>WEB<br>DEVELOPER<br>AND AI<br><b>AUTOMATION</b></h1>
+<p class="sub">We build fast websites + AI chatbots that capture customers 24/7</p>
 
-<div class="section">
 <h2>OUR SERVICES</h2>
 <div class="grid">
 <div class="card"><h3>🌐 Website Development</h3><p>Super-fast, mobile-first websites that load in 2 seconds and convert visitors to buyers.</p></div>
 <div class="card"><h3>🤖 AI Automation</h3><p>AI that replies WhatsApp/IG, books appointments & closes sales while you sleep.</p></div>
-<div class="card"><h3>📈 Sales Funnels</h3><p>Funnels that turn cold traffic into hot paying customers on autopilot.</p></div>
-<div class="card"><h3>⚡ Chatbot Setup</h3><p>24/7 AI chatbot to capture leads, answer questions & never miss a sale.</p></div>
+<div class="card"><h3>📈 Sales Funnels</h3><p>High-converting funnels that turn cold traffic into paying customers on autopilot.</p></div>
+<div class="card"><h3>💬 AI Chatbot Setup</h3><p>24/7 smart chatbot that captures leads, answers FAQs and never misses a sale.</p></div>
 </div>
 
-<div class="about">
-<h2>SANDI<span style="color:#00BFFF">X</span> — We Build Websites & AI AUTOMATION For Businesses Worldwide.</h2>
-<p><b>SANDIX is your global growth partner, not just a designer.</b> We help businesses worldwide — from startups in Texas, brands in London, clinics in Dubai, to shops in Lagos — build digital systems that print money 24/7.</p>
-<p><b>1. HIGH-CONVERTING WEBSITES:</b> No slow templates. We build fast, SEO-optimized, mobile-first websites engineered to turn visitors into paying customers.</p>
-<p><b>2. AI BUSINESS AUTOMATION:</b> We install AI that handles your business non-stop — instant DM replies, lead capture, appointment booking, follow-ups & abandoned cart recovery.</p>
-<p>Most agencies stop at design. We build the full money machine: <b>Website + Funnel + AI + Automation.</b> No borders. No limits. Whether you're in USA, UK, UAE or Nigeria — if you're serious about growth, SANDIX is your team.</p>
+<h2>CONTACTS</h2>
+<div class="contact-grid">
+<div class="contact-card"><p style="font-size:22px">💬</p><p style="color:#fff;font-weight:800;margin:6px 0">WhatsApp</p><a href="https://wa.me/2340000000000" target="_blank">Chat on WhatsApp</a></div>
+<div class="contact-card"><p style="font-size:22px">🤖</p><p style="color:#fff;font-weight:800;margin:6px 0">Customer Service</p><a href="https://t.me/yourbot" target="_blank">Telegram Bot</a></div>
 </div>
 
-<h2>CLIENT TESTIMONIES</h2>
-<div class="grid">
-<div class="card"><p>⭐⭐⭐⭐⭐<br>"SANDIX built my salon website in 3 days. Customers now book online. $120 worth it!" - Blessing, Lagos</p></div>
-<div class="card"><p>⭐⭐⭐⭐⭐<br>"AI bot replies my customers at night. I wake up to sales!" - Ahmed, Dubai</p></div>
-</div>
-</div>
-
-<div class="toggle-wrap">
 <button class="toggle-btn" onclick="document.getElementById('formBox').style.display = document.getElementById('formBox').style.display==='block'?'none':'block'">📝 Fill Form To Order</button>
-</div>
 
 <div id="formBox" class="form-box">
-<h3 style="color:#111;text-align:center;margin:0 0 12px;font-weight:800">🚀 ORDER YOUR WEBSITE + AI AUTOMATION</h3>
+<h3 style="color:#111;text-align:center;margin:0 0 12px;font-weight:900">🚀 ORDER YOUR WEBSITE + AI AUTOMATION</h3>
 <iframe src="https://tally.so/r/68o0NP" width="100%" height="650" frameborder="0" style="border:0;border-radius:12px" title="SANDIX Order Form"></iframe>
 </div>
 
-<div class="map">📍 Global Service - We Work Worldwide<br>Lagos • London • Dubai • New York</div>
+</div>
+
+<div class="white">
+
+<div class="about">
+<h2>SANDI<span style="color:#00BFFF">X</span> — We Build Websites & AI AUTOMATION That Turn Businesses Into Money Machines Worldwide.</h2>
+<p><b>SANDIX is not just a web design agency. We are your global growth partner.</b> We exist for one reason: to help ambitious businesses around the world stop struggling online and start dominating their market.</p>
+<p>Whether you're a startup in Texas, a fashion brand in London, a clinic in Dubai, a restaurant in Toronto, or a real estate company in Lagos — we build you a digital system that works 24/7 to bring customers, close sales, and grow revenue.</p>
+<p><b>1. HIGH-CONVERTING WEBSITES:</b> We don't build pretty websites that just sit there. We build super-fast, mobile-first, SEO-optimized websites that load in under 2 seconds and are engineered to turn every visitor into a paying customer. No templates. Pure performance.</p>
+<p><b>2. AI BUSINESS AUTOMATION:</b> This is where we change the game. We install AI AUTOMATION that handles your business while you sleep — AI that replies to WhatsApp & Instagram DMs instantly, captures leads from your website, books appointments automatically, follows up with customers who didn't buy, and recovers abandoned sales.</p>
+<p style="font-weight:800;color:#111;background:#fff;padding:12px;border-radius:10px;border-left:4px solid #00BFFF">We are SANDIX. We build websites that sell. We install AI that closes. No matter where you are in the world — if you are serious about making real money online, we are your team.</p>
+</div>
+
+<h2 style="font-size:18px;font-weight:900;text-align:center;margin-bottom:14px">CLIENT TESTIMONIES (9)</h2>
+<div class="test-grid">
+<div class="test-card">⭐⭐⭐⭐⭐<br><b>Blessing - Salon Lagos</b><br>"SANDIX built my booking website in 3 days. Customers now book online. Best $120 I spent!"</div>
+<div class="test-card">⭐⭐⭐⭐⭐<br><b>Ahmed - Dubai</b><br>"AI bot replies my customers at 2am. I wake up to sales every morning."</div>
+<div class="test-card">⭐⭐⭐⭐⭐<br><b>Sarah - London Fashion</b><br>"Fast website, clean design. My sales increased by 70% in 2 weeks."</div>
+<div class="test-card">⭐⭐⭐⭐⭐<br><b>Mike - Texas Gym</b><br>"Lead capture + automation is fire. No more missed calls."</div>
+<div class="test-card">⭐⭐⭐⭐⭐<br><b>Chioma - Restaurant NG</b><br>"Customers order via website now. SANDIX delivered!"</div>
+<div class="test-card">⭐⭐⭐⭐⭐<br><b>David - Toronto Real Estate</b><br>"Professional funnel. I now get 15 leads daily."</div>
+<div class="test-card">⭐⭐⭐⭐⭐<br><b>Fatima - UAE Clinic</b><br>"WhatsApp AI booking saved my staff 5 hours daily."</div>
+<div class="test-card">⭐⭐⭐⭐⭐<br><b>John - UK Barber</b><br>"Simple, fast, and converts. Clients love the chatbot."</div>
+<div class="test-card">⭐⭐⭐⭐⭐<br><b>Tolu - Ecom Lagos</b><br>"SANDIX is legit. My store now runs on autopilot."</div>
+</div>
+
+<div class="address">
+<h3>📍 OUR ADDRESS</h3>
+<p><b style="color:#fff">25 MTN Street Obafemi Ogun, Nigeria.</b><br>We serve clients worldwide: Nigeria | UK | USA | UAE | Canada. Available 24/7 via WhatsApp & Telegram.</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=Obafemi%20Ogun%20Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</div>
+
+</div>
 
 <div class="footer">© 2026 SANDIX — Web Developer & AI Automation Agency. Worldwide Service.</div>
 
