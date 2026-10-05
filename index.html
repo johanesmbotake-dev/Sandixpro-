@@ -1,128 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="_XxIQs4najkFff_dbWDrGR0ifEMyE-Dgt55d34Si-ls" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SANDIXPRO - WEB DEVELOPER AND AI AUTOMATION AGENCY</title>
-  <meta name="description" content="SANDIXPRO - WEB DEVELOPER AND AI AUTOMATION AGENCY. We build websites and AI chatbots that reply WhatsApp, Instagram 24/7 and close sales. Based in Nigeria, serving clients worldwide.">
+<title>SANDIX - Web Developer & AI Automation</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,sans-serif}
-body{background:#fff}
-.header{background:#fff;padding:16px 18px;position:sticky;top:0;z-index:99;border-bottom:1px solid #eee}
-.logo{font-size:28px;font-weight:900;color:#111;letter-spacing:1px}
-.logo span{color:#00BFFF}
-.black{background:#000;color:#fff;padding:30px 14px 30px;text-align:center}
-.black h1{font-size:42px;font-weight:900;line-height:1.1}
-.black h1 b{color:#00BFFF}
-.black .sub{color:#aaa;margin:14px 0 30px;font-size:14px}
-.black h2{font-size:20px;font-weight:900;margin:28px 0 14px;letter-spacing:1px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
-.card{background:#111;border:1px solid #222;border-radius:18px;padding:16px}
-.card h3{font-size:14px;margin-bottom:8px;font-weight:800}
-.card p{font-size:12.5px;color:#aaa;line-height:1.5}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-.contact-card{background:#0a0a0a;border:1px solid #00BFFF;border-radius:18px;padding:16px;text-align:center}
-.contact-card a{color:#00BFFF;text-decoration:none;font-weight:800;font-size:14px}
-.toggle-btn{margin:26px auto 0;background:#00BFFF;color:#000;font-weight:900;padding:14px 28px;border:none;border-radius:30px;font-size:15px;cursor:pointer;width:100%;max-width:340px;display:block}
-.form-box{display:none;margin:18px 0 0;background:#fff;border-radius:16px;padding:10px}
-.white{background:#fff;color:#111;padding:24px 14px}
-.about{background:#f8f9ff;border:1px solid #eef0ff;border-radius:20px;padding:22px 16px;margin-bottom:24px}
-.about h2{font-size:20px;font-weight:900;line-height:1.25;margin-bottom:12px;text-align:left}
-.about p{font-size:13.5px;line-height:1.7;color:#333;margin-bottom:10px}
-.test-grid{display:grid;grid-template-columns:1fr;gap:10px}
-@media(min-width:600px){.test-grid{grid-template-columns:1fr 1fr 1fr}}
-.test-card{background:#fff;border:1px solid #eee;border-radius:16px;padding:14px;font-size:12.5px;line-height:1.5;color:#333;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-.address{margin-top:24px;background:#111;color:#fff;border-radius:18px;padding:18px}
-.address h3{font-size:16px;margin-bottom:8px}
-.address p{font-size:13px;color:#aaa;line-height:1.6}
-.map{margin-top:12px;height:260px;border-radius:14px;overflow:hidden;border:1px solid #222}
-.map iframe{width:100%;height:100%;border:0}
-.footer{text-align:center;padding:18px;color:#888;font-size:11px;background:#fff}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#000;color:#fff}
+.top{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;position:sticky;top:0;z-index:99}
+.logo{font-weight:900;font-size:20px;color:#000}.logo b{color:#00BFFF}
+.sc{width:36px;height:36px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff}.sc i{color:#00BFFF;font-style:normal}
+.black{background:radial-gradient(120% 80% at 50% 0%,#1e1e1e,#000);padding-bottom:16px}
+.hero{text-align:center;padding:32px 20px 10px}.hero h1{font-weight:900;font-size:40px;line-height:.9}.hero h1 span{color:#00BFFF}.hero p{color:#888;font-size:13px;margin-top:12px}
+.sec{text-align:center;font-weight:900;margin:24px 0 12px;letter-spacing:1px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 12px}
+.box{background:#111;border:1px solid #222;border-radius:16px;padding:12px}.box b{font-size:12px}.box div{font-size:11px;color:#888;margin-top:5px;line-height:1.4}
+.ctitle{text-align:center;margin:20px 0 10px;font-size:13px;letter-spacing:1px;color:#aaa}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 12px}
+.cbox{background:#111;border:1.5px solid #00BFFF;border-radius:16px;padding:14px;text-align:center;cursor:pointer;box-shadow:0 0 15px rgba(0,191,255,.12)}.cbox .bl{color:#00BFFF;font-weight:800;font-size:13px}
+.fill{background:#00BFFF;color:#000;padding:13px;border-radius:24px;text-align:center;font-weight:900;margin:14px 12px;cursor:pointer;box-shadow:0 4px 15px rgba(0,191,255,.3)}
+.white{background:#fff;border-radius:28px 28px 0 0;margin-top:12px;padding:16px 0 0}
+.about{background:#fff;color:#000;margin:0 12px;padding:18px;border-radius:16px;border:1px solid #eee}.about h2{font-size:17px;font-weight:900;margin-bottom:8px}.about p{font-size:13px;line-height:1.5;color:#222}
+.feat{background:#f7f7f7;padding:10px;border-radius:10px;margin-top:8px;font-size:12px;color:#000;border:1px solid #f0f0f0}
+.ttitle{color:#000;text-align:center;font-weight:900;margin:22px 0 12px;font-size:17px}
+.tlist{padding:0 12px;display:grid;gap:10px}
+.tcard{background:#fff;color:#000;border:1px solid #eee;border-radius:16px;padding:14px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.05)}.stars{letter-spacing:3px;font-size:13px;margin-bottom:6px}
+.foot{background:#fff;margin:14px 12px 0;padding:28px 16px;text-align:center;border-radius:16px 16px 0 0;border:1px solid #eee;border-bottom:0}
+.big{width:120px;height:120px;background:#000;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:50px;color:#fff}.big i{color:#00BFFF;font-style:normal}
+.sunder{font-weight:900;font-size:34px;color:#000;margin-top:12px}.sunder span{color:#00BFFF}.sub{font-size:10px;letter-spacing:3px;color:#888;margin-top:4px}
+.addr{background:#0a0a0a;border:1px solid #222;margin:0 12px;padding:16px;border-radius:16px;text-align:center;color:#fff}
+.map{margin:10px 12px 0;border-radius:16px;overflow:hidden;border:1px solid #e5e5e5}
+.copy{background:#fff;padding:12px;text-align:center;font-size:10px;color:#888}
 </style>
 </head>
 <body>
-
-<div class="header" style="display:flex; justify-content:space-between; align-items:center; padding:12px 20px; background:white;"><div style="font-weight:900; font-size:20px;">SANDI<span style="color:#00BFFF">X</span></div><div style="width:42px; height:42px; background:black; border-radius:50%; display:flex; align-items:center; justify-content:center;"><span style="color:white; font-weight:900; font-size:18px;">S</span><span style="color:#00BFFF; font-weight:900; font-size:18px;">X</span></div></div>
+<div class="top"><div class="logo">SANDI<b>X</b></div><div class="sc">S<i>X</i></div></div>
 <div class="black">
-<h1>WEB<br>DEVELOPER<br>AND AI<br><b>AUTOMATION</b></h1>
-<p class="sub">We build fast websites + AI chatbots that capture customers 24/7</p>
-
-<h2>OUR SERVICES</h2>
+<div class="hero"><h1>WEB<br>DEVELOPER<br>AND AI<br><span>AUTOMATION</span></h1><p>We build fast websites + AI chatbots that capture customers 24/7</p></div>
+<div class="sec">OUR SERVICES</div>
 <div class="grid">
-<div class="card"><h3>🌐 Website Development</h3><p>Super-fast, mobile-first websites that load in 2 seconds and convert visitors to buyers.</p></div>
-<div class="card"><h3>🤖 AI Automation</h3><p>AI that replies WhatsApp/IG, books appointments & closes sales while you sleep.</p></div>
-<div class="card"><h3>📈 Sales Funnels</h3><p>High-converting funnels that turn cold traffic into paying customers on autopilot.</p></div>
-<div class="card"><h3>💬 AI Chatbot Setup</h3><p>24/7 smart chatbot that captures leads, answers FAQs and never misses a sale.</p></div>
-</div
-  <h2>CONTACTS</h2>
-  <div class="contact-grid">
-  <div class="contact-card" onclick="window.open('https://wa.me/2347069918890?text=Hi%20SANDIX%20I%20want%20Website%20%2B%20AI','_blank')" style="cursor:pointer">
-  <p style="font-size:22px">💬</p><p style="color:#fff;font-weight:800">WhatsApp</p><p style="color:#00BFFF;font-weight:800">Chat on WhatsApp</p>
-  </div>
-  <div class="contact-card" onclick="window.open('https://t.me/sandixauto123bot','_blank')" style="cursor:pointer">
-  <p style="font-size:22px">🤖</p><p style="color:#fff;font-weight:800">Customer Service</p><p style="color:#00BFFF;font-weight:800">Telegram Bot</p>
-  </div>
-  </div>
-
-  <button class="toggle-btn" onclick="const b=document.getElementById('formBox'); b.style.display=b.style.display==='block'?'none':'block'; if(b.style.display==='block'){b.scrollIntoView({behavior:'smooth'})}">📝 Fill Form To Order</button>
-
-    <div id="formBox" class="form-box" style="background:#fff;padding:12px;border-radius:12px;margin:12px;box-sizing:border-box">
-    <h3 style="color:#111;text-align:center;margin:0 0 8px 0">Get Started</h3>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLS.../viewform?embedded=true" width="100%" height="380" style="border:0;border-radius:12px" frameborder="0">Loading…</iframe>
-    </div>
-
-    <div class="about" style="background:#fff;margin:12px;padding:16px;border-radius:16px;text-align:left">
-    <b style="font-size:13px;letter-spacing:2px;color:#000;display:block;font-weight:900;margin:0;text-align:left">ABOUT SANDI<span style="color:#00BFFF">X</span></b>
-    <h2 style="font-size:22px;font-weight:900;line-height:1.25;margin:8px 0 0 0;text-align:left;color:#000">We build websites and <span style="color:#00BFFF">AI Automations</span> that bring customers</h2>
-    <p style="margin:12px 0 0 0;text-align:left;color:#333;font-size:14px;line-height:1.6">At <b>SANDIX</b>, we help real businesses like yours grow faster. We build growth engines.</p>
-    <p style="margin:10px 0 0 0;text-align:left;color:#333;font-size:14px"><b>1. Websites that Sell:</b> Fast, beautiful, works on phone.</p>
-    <p style="margin:8px 0 0 0;text-align:left;color:#333;font-size:14px"><b>2. AI that Works 24/7:</b> Handles WhatsApp, bookings while you sleep.</p>
-    <p style="margin:10px 0 0 0;text-align:left;color:#222;font-size:14px;font-weight:600">More customers, more bookings, less stress — SANDIX is for you.</p>
-    <div style="margin-top:14px;padding:12px;background:#000;color:#fff;border-radius:10px;text-align:center;font-weight:800">WE LAUNCH <span style="color:#00BFFF">YOUR GROWTH.</span></div>
-    </div>
-<h2 style="font-size:18px;font-weight:900;text-align:center;margin:25px 0 12px 0;letter-spacing:1px">CLIENT TESTIMONIES (9)</h2>
-<div class="test-grid" style="display:grid;gap:12px;padding:0 12px">
-<div class="test-card" style="background:#fff;color:#000;padding:16px;border-radius:16px;text-align:center"> <div style="color:#000;font-size:14px;letter-spacing:2px">★★★★★</div> <b style="font-size:14px;display:block;margin:6px 0">Blessing - Salon Lagos</b> <span style="font-size:13px;color:#222;line-height:1.4;display:block">"SANDIX built my booking website in 3 days. Best $120 I spent!"</span> </div>
-
-<div class="test-card" style="background:#fff;color:#000;padding:16px;border-radius:16px;text-align:center"> <div style="color:#000;font-size:14px;letter-spacing:2px">★★★★★</div> <b style="font-size:14px;display:block;margin:6px 0">Ahmed - Dubai</b> <span style="font-size:13px;color:#222;line-height:1.4;display:block">"AI bot replies my customers at 2am. I wake up to sales!"</span> </div>
-
-<div class="test-card" style="background:#fff;color:#000;padding:16px;border-radius:16px;text-align:center"> <div style="color:#000;font-size:14px;letter-spacing:2px">★★★★★</div> <b style="font-size:14px;display:block;margin:6px 0">Sarah - London Fashion</b> <span style="font-size:13px;color:#222;line-height:1.4;display:block">"Fast website, clean design. Sales +70% in 2 weeks!"</span> </div>
-
-<div class="test-card" style="background:#fff;color:#000;padding:16px;border-radius:16px;text-align:center"> <div style="color:#000;font-size:14px;letter-spacing:2px">★★★★★</div> <b style="font-size:14px;display:block;margin:6px 0">Mike - Texas Gym</b> <span style="font-size:13px;color:#222;line-height:1.4;display:block">"Lead capture + automation is fire. No more missed calls."</span> </div>
-
-<div class="test-card" style="background:#fff;color:#000;padding:16px;border-radius:16px;text-align:center"> <div style="color:#000;font-size:14px;letter-spacing:2px">★★★★★</div> <b style="font-size:14px;display:block;margin:6px 0">Chioma - Restaurant NG</b> <span style="font-size:13px;color:#222;line-height:1.4;display:block">"Customers order via website now. SANDIX delivered!"</span> </div>
-
-<div class="test-card" style="background:#fff;color:#000;padding:16px;border-radius:16px;text-align:center"> <div style="color:#000;font-size:14px;letter-spacing:2px">★★★★★</div> <b style="font-size:14px;display:block;margin:6px 0">David - Canada Real Estate</b> <span style="font-size:13px;color:#222;line-height:1.4;display:block">"My property site looks premium. Clients trust me more now!"</span> </div>
-
-<div class="test-card" style="background:#fff;color:#000;padding:16px;border-radius:16px;text-align:center"> <div style="color:#000;font-size:14px;letter-spacing:2px">★★★★★</div> <b style="font-size:14px;display:block;margin:6px 0">Aisha - Abuja Makeup</b> <span style="font-size:13px;color:#222;line-height:1.4;display:block">"WhatsApp automation saved me 4 hours daily. Game changer!"</span> </div>
-
-<div class="test-card" style="background:#fff;color:#000;padding:16px;border-radius:16px;text-align:center"> <div style="color:#000;font-size:14px;letter-spacing:2px">★★★★★</div> <b style="font-size:14px;display:block;margin:6px 0">John - UK Barber</b> <span style="font-size:13px;color:#222;line-height:1.4;display:block">"Online bookings doubled. No more WhatsApp stress."</span> </div>
-
-<div class="test-card" style="background:#fff;color:#000;padding:16px;border-radius:16px;text-align:center"> <div style="color:#000;font-size:14px;letter-spacing:2px">★★★★★</div> <b style="font-size:14px;display:block;margin:6px 0">Fatima - UAE Boutique</b> <span style="font-size:13px;color:#222;line-height:1.4;display:block">"SANDIX gave me website + AI. My store runs itself!"</span> </div>
+<div class="box"><b>🌐 Website Development</b><div>Super-fast, mobile-first websites that load in 2 seconds and convert visitors to buyers.</div></div>
+<div class="box"><b>🤖 AI Automation</b><div>AI that replies WhatsApp/IG, books appointments & closes sales while you sleep.</div></div>
+<div class="box"><b>📈 Sales Funnels</b><div>High-converting funnels that turn cold traffic into paying customers on autopilot.</div></div>
+<div class="box"><b>💬 AI Chatbot Setup</b><div>24/7 smart chatbot that captures leads, answers FAQs and never misses a sale.</div></div>
 </div>
-<!-- BIG LOGO FOR GREEN CIRCLE - SX IN CIRCLE -->
-<div style="text-align:center; padding:50px 0; background:white;">
-  <div style="width:130px; height:130px; background:black; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 15px auto;">
-    <span style="color:white; font-size:55px; font-weight:900;">S</span><span style="color:#00BFFF; font-size:55px; font-weight:900;">X</span>
-  </div>
-  <h1 style="font-size:42px; font-weight:900; margin:0; letter-spacing:2px;">SANDI<span style="color:#00BFFF">X</span></h1>
-  <p style="color:#888; font-size:13px; letter-spacing:5px; margin-top:8px; font-weight:600;">WEB • AI • GLOBAL</p>
-</div>
-  
-  
-
-<div class="address">
-<h3>📍 OUR ADDRESS</h3>
-<p><b style="color:#fff">25 MTN Street Obafemi Ogun, Nigeria.</b><br>We serve clients worldwide: Nigeria | UK | USA | UAE | Canada. Available 24/7 via WhatsApp & Telegram.</p>
-<div class="map">
-<iframe src="https://maps.google.com/maps?q=Obafemi%20Ogun%20Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-</div>
-</div>
-
-</div>
-
-<div class="footer">© 2026 SANDIX — Web Developer & AI Automation Agency. Worldwide Service.</div>
-
-</body>
-</html>
+<div class="ctitle">CONTACTS</div>
+<div class="cgrid">
+<div class="cbox" onclick="window.open('https://wa.me/2348100000000?text=Hi%20SANDIX%20I%20want%20website','_blank')"><div>💬</div><b>WhatsApp</b><div class="bl">Chat on<br>WhatsApp</div></div>
+<div class="cbox" onclick="window.open('https://t.me/sandixbot','_blank')"><div>🤖</div><b>Customer Service
