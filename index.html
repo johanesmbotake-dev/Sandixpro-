@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SANDIX - Web Developer & AI Automation</title>
+<title>SANDIX</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{background:#000;color:#fff}
@@ -17,14 +17,18 @@ body{background:#000;color:#fff}
 .box{background:#111;border:1px solid #222;border-radius:16px;padding:12px}.box b{font-size:12px}.box div{font-size:11px;color:#888;margin-top:5px;line-height:1.4}
 .ctitle{text-align:center;margin:20px 0 10px;font-size:13px;letter-spacing:1px;color:#aaa}
 .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 12px}
-.cbox{background:#111;border:1.5px solid #00BFFF;border-radius:16px;padding:14px;text-align:center;cursor:pointer;box-shadow:0 0 15px rgba(0,191,255,.12)}.cbox .bl{color:#00BFFF;font-weight:800;font-size:13px}
-.fill{background:#00BFFF;color:#000;padding:13px;border-radius:24px;text-align:center;font-weight:900;margin:14px 12px;cursor:pointer;box-shadow:0 4px 15px rgba(0,191,255,.3)}
+.cbox{background:#111;border:1.5px solid #00BFFF;border-radius:16px;padding:14px;text-align:center}
+.cbox .bl{color:#00BFFF;font-weight:800;font-size:13px}
+.fill{background:#00BFFF;color:#000;padding:13px;border-radius:24px;text-align:center;font-weight:900;margin:14px 12px}
+.form{background:#fff;margin:12px;border-radius:16px;padding:16px}
+.form h3{color:#000;font-weight:900;text-align:center;margin-bottom:12px}
+.form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;margin-bottom:10px;font-size:13px}
+.form button{width:100%;background:#000;color:#fff;padding:13px;border-radius:12px;border:none;font-weight:900}
 .white{background:#fff;border-radius:28px 28px 0 0;margin-top:12px;padding:16px 0 0}
 .about{background:#fff;color:#000;margin:0 12px;padding:18px;border-radius:16px;border:1px solid #eee}.about h2{font-size:17px;font-weight:900;margin-bottom:8px}.about p{font-size:13px;line-height:1.5;color:#222}
-.feat{background:#f7f7f7;padding:10px;border-radius:10px;margin-top:8px;font-size:12px;color:#000;border:1px solid #f0f0f0}
-.ttitle{color:#000;text-align:center;font-weight:900;margin:22px 0 12px;font-size:17px}
+.ttitle{color:#000;text-align:center;font-weight:900;margin:22px 0 12px}
 .tlist{padding:0 12px;display:grid;gap:10px}
-.tcard{background:#fff;color:#000;border:1px solid #eee;border-radius:16px;padding:14px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.05)}.stars{letter-spacing:3px;font-size:13px;margin-bottom:6px}
+.tcard{background:#fff;color:#000;border:1px solid #eee;border-radius:16px;padding:14px;text-align:center}
 .foot{background:#fff;margin:14px 12px 0;padding:28px 16px;text-align:center;border-radius:16px 16px 0 0;border:1px solid #eee;border-bottom:0}
 .big{width:120px;height:120px;background:#000;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:50px;color:#fff}.big i{color:#00BFFF;font-style:normal}
 .sunder{font-weight:900;font-size:34px;color:#000;margin-top:12px}.sunder span{color:#00BFFF}.sub{font-size:10px;letter-spacing:3px;color:#888;margin-top:4px}
@@ -39,12 +43,49 @@ body{background:#000;color:#fff}
 <div class="hero"><h1>WEB<br>DEVELOPER<br>AND AI<br><span>AUTOMATION</span></h1><p>We build fast websites + AI chatbots that capture customers 24/7</p></div>
 <div class="sec">OUR SERVICES</div>
 <div class="grid">
-<div class="box"><b>🌐 Website Development</b><div>Super-fast, mobile-first websites that load in 2 seconds and convert visitors to buyers.</div></div>
-<div class="box"><b>🤖 AI Automation</b><div>AI that replies WhatsApp/IG, books appointments & closes sales while you sleep.</div></div>
-<div class="box"><b>📈 Sales Funnels</b><div>High-converting funnels that turn cold traffic into paying customers on autopilot.</div></div>
-<div class="box"><b>💬 AI Chatbot Setup</b><div>24/7 smart chatbot that captures leads, answers FAQs and never misses a sale.</div></div>
+<div class="box"><b>🌐 Website Development</b><div>Super-fast, mobile-first websites that load in 2 seconds.</div></div>
+<div class="box"><b>🤖 AI Automation</b><div>AI that replies WhatsApp/IG, books & closes sales while you sleep.</div></div>
+<div class="box"><b>📈 Sales Funnels</b><div>High-converting funnels that turn cold traffic to paying customers.</div></div>
+<div class="box"><b>💬 AI Chatbot Setup</b><div>24/7 smart chatbot that captures leads and never misses sale.</div></div>
 </div>
 <div class="ctitle">CONTACTS</div>
 <div class="cgrid">
-<div class="cbox" onclick="window.open('https://wa.me/2348100000000?text=Hi%20SANDIX%20I%20want%20website','_blank')"><div>💬</div><b>WhatsApp</b><div class="bl">Chat on<br>WhatsApp</div></div>
-<div class="cbox" onclick="window.open('https://t.me/sandixbot','_blank')"><div>🤖</div><b>Customer Service
+<div class="cbox" onclick="window.open('https://wa.me/2348100000000','_blank')"><div>💬</div><b>WhatsApp</b><div class="bl">Chat on<br>WhatsApp</div></div>
+<div class="cbox" onclick="window.open('https://t.me/sandixbot','_blank')"><div>🤖</div><b>Customer Service</b><div class="bl">Telegram Bot</div></div>
+</div>
+<div class="fill">📝 Fill Form To Order Below</div>
+<div class="form">
+<h3>ORDER FORM</h3>
+<input placeholder="Your Name">
+<input placeholder="Business Name">
+<input placeholder="WhatsApp Number">
+<select><option>Website Development - $120</option><option>AI Automation - $80</option><option>Sales Funnel - $100</option><option>AI Chatbot - $70</option><option>Full Package - $250</option></select>
+<textarea placeholder="Tell us about your business..."></textarea>
+<button onclick="window.open('https://wa.me/2348100000000?text=Hi%20SANDIX%20I%20want%20to%20order','_blank')">Submit Order Via WhatsApp</button>
+</div>
+</div>
+<div class="white">
+<div class="about">
+<h2>ABOUT SANDIX</h2>
+<p><b>SANDIX is long, strong, and friendly business</b> — Web Developer & AI Automation agency. Fast, clean, mobile-first websites + AI chatbots that capture customers 24/7.</p>
+<p style="margin-top:8px">Long in delivery, Strong in performance, Friendly in support - that's SANDIX!</p>
+</div>
+<div class="ttitle">CLIENT TESTIMONIES (9)</div>
+<div class="tlist">
+<div class="tcard"><div>★★★★★</div><b>Blessing - Salon Lagos</b><p>"Best $120 I spent!"</p></div>
+<div class="tcard"><div>★★★★★</div><b>Ahmed - Dubai</b><p>"AI bot replies at 2am. Wake up to sales!"</p></div>
+<div class="tcard"><div>★★★★★</div><b>Sarah - London</b><p>"Sales +70% in 2 weeks!"</p></div>
+<div class="tcard"><div>★★★★★</div><b>Mike - Texas Gym</b><p>"Lead capture is fire!"</p></div>
+<div class="tcard"><div>★★★★★</div><b>Chioma - Restaurant NG</b><p>"SANDIX delivered!"</p></div>
+<div class="tcard"><div>★★★★★</div><b>David - Canada</b><p>"Clients trust me more now!"</p></div>
+<div class="tcard"><div>★★★★★</div><b>Aisha - Abuja</b><p>"Game changer!"</p></div>
+<div class="tcard"><div>★★★★★</div><b>John - UK Barber</b><p>"Bookings doubled!"</p></div>
+<div class="tcard"><div>★★★★★</div><b>Fatima - UAE</b><p>"My store runs itself!"</p></div>
+</div>
+<div class="foot"><div class="big">S<i>X</i></div><div class="sunder">SANDI<span>X</span></div><div class="sub">WEB • AI • GLOBAL</div></div>
+<div class="addr"><div style="font-weight:900">📍 OUR ADDRESS</div><div style="font-weight:800;margin-top:6px">25 MTN Street Obafemi Ogun, Nigeria.</div><div style="font-size:11px;color:#aaa;margin-top:4px">We serve worldwide: Nigeria | UK | USA | UAE | Canada. 24/7 via WhatsApp & Telegram.</div></div>
+<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962!2d3.3!3d6.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a%2F!2sObafemi%20Ogun%20Nigeria!5e0!3m2!1sen!2sng!4v1" width="100%" height="250" style="border:0" loading="lazy"></iframe></div>
+<div class="copy">© 2026 SANDIX — Long • Strong • Friendly Business</div>
+</div>
+</body>
+                   </html>
