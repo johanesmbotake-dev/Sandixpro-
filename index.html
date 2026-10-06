@@ -55,32 +55,32 @@
 .more-box{background:#000;border:2px solid #00bfff;display:flex;align-items:center;justify-content:center}
 .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:15px}.lightbox img{width:96%;max-width:550px;max-height:65vh;object-fit:cover;border-radius:14px;border:2px solid #00bfff}.lightbox span{color:#fff;margin-top:20px;font-size:14px;border:1px solid #00bfff;padding:10px 32px;border-radius:25px;cursor:pointer;background:#111}
 </style>
-
-<div class="work-title">WE ARE FLEXIBLE</div>
-<div class="scroll-wrap">
-<div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400"><div class="box-label">BOUTIQUE</div></div>
-<div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=400"><div class="box-label">SUPERMARKET</div></div>
-<div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400"><div class="box-label">COMPANY</div></div>
-<div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?w=400"><div class="box-label">SCHOOLS</div></div>
-<div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=400"><div class="box-label">CONTENT CREATORS</div></div>
-<div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400"><div class="box-label">REAL ESTATE</div></div>
-<div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400"><div class="box-label">HOTELS</div></div>
-<div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=400"><div class="box-label">E-COMMERCE</div></div>
-<div class="box more-box"><span>AND<br>MORE...</span></div>
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-body{margin:0;background:#111;color:#fff;font-family:Arial}
-.work-title{text-align:center;font-size:22px;font-weight:900;margin:30px 0 15px 0;letter-spacing:1px}
-.scroll-wrap{display:flex;overflow-x:auto;gap:12px;padding:10px 14px;scroll-behavior:smooth}
-.scroll-wrap::-webkit-scrollbar{display:none}
-.box{position:relative;min-width:160px;height:160px;border-radius:14px;overflow:hidden;flex-shrink:0;border:1px solid #222;cursor:pointer}
-.box img{width:100%;height:100%;object-fit:cover}
-.box-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.9));padding:8px;font-size:12px;font-weight:700;text-align:center}
-.more-box{background:#000;border:2px solid #00bfff;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:900;font-size:14px;color:#00bfff}
-.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:15px}
+  <style>
+.flex-title{text-align:center;color:#00bfff;font-size:26px;font-weight:900;margin:45px 0 10px}
+.business-wrap{display:flex;gap:16px;overflow-x:auto;padding:10px 14px 25px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.business-wrap::-webkit-scrollbar{display:none}
+.biz{ min-width:88vw; height:380px; border-radius:22px; overflow:hidden; position:relative; border:2px solid #1a1a1a; scroll-snap-align:center; flex-shrink:0; cursor:pointer; box-shadow:0 10px 30px rgba(0,0,0,.5) }
+.biz img{width:100%;height:100%;object-fit:cover}
+.biz-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.95) 20%,transparent);padding:35px 12px 18px;text-align:center;font-weight:900;font-size:18px;letter-spacing:1px}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:99999;display:none;align-items:center;justify-content:center;flex-direction:column;padding:10px}
+.lightbox img{width:100%;max-width:700px;max-height:85vh;border-radius:20px;border:3px solid #00bfff;object-fit:contain}
+.light-close{margin-top:22px;color:#fff;border:2px solid #00bfff;padding:14px 40px;border-radius:30px;background:#111;font-weight:900;font-size:16px}
+@media(min-width:768px){.biz{min-width:360px;height:420px}}
 </style>
-</head>
-<body></body>
+
+<div class="flex-title">WE ARE FLEXIBLE</div>
+<div class="business-wrap">
+<div class="biz" onclick="openBiz(this)"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"><div class="biz-label">HOTELS</div></div>
+<div class="biz" onclick="openBiz(this)"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800"><div class="biz-label">E-COMMERCE</div></div>
+<div class="biz" onclick="openBiz(this)"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800"><div class="biz-label">BOUTIQUE</div></div>
+<div class="biz" onclick="openBiz(this)"><img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800"><div class="biz-label">SUPERMARKET</div></div>
+<div class="biz" onclick="openBiz(this)"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800"><div class="biz-label">RESTAURANT</div></div>
+<div class="biz" onclick="openBiz(this)"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800"><div class="biz-label">SALON & SPA</div></div>
+<div class="biz" onclick="openBiz(this)"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800"><div class="biz-label">REAL ESTATE</div></div>
+</div>
+
+<div id="bizLight" class="lightbox" onclick="closeBiz()"><img id="bizImg" src=""><div class="light-close">CLOSE X</div><div id="bizName" style="margin-top:14px;color:#00bfff;font-weight:900;font-size:20px"></div></div>
+<script>
+function openBiz(el){document.getElementById('bizImg').src=el.querySelector('img').src.replace('w=800','w=1200');document.getElementById('bizName').innerText=el.querySelector('.biz-label').innerText;document.getElementById('bizLight').style.display='flex'}
+function closeBiz(){document.getElementById('bizLight').style.display='none'}
+</script>
