@@ -1,91 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SANDIX</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#000;color:#fff}
-.top{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;position:sticky;top:0;z-index:99}
-.logo{font-weight:900;font-size:20px;color:#000}.logo b{color:#00BFFF}
-.sc{width:36px;height:36px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff}.sc i{color:#00BFFF;font-style:normal}
-.black{background:radial-gradient(120% 80% at 50% 0%,#1e1e1e,#000);padding-bottom:16px}
-.hero{text-align:center;padding:32px 20px 10px}.hero h1{font-weight:900;font-size:40px;line-height:.9}.hero h1 span{color:#00BFFF}.hero p{color:#888;font-size:13px;margin-top:12px}
-.sec{text-align:center;font-weight:900;margin:24px 0 12px;letter-spacing:1px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 12px}
-.box{background:#111;border:1px solid #222;border-radius:16px;padding:12px}.box b{font-size:12px}.box div{font-size:11px;color:#888;margin-top:5px;line-height:1.4}
-.ctitle{text-align:center;margin:20px 0 10px;font-size:13px;letter-spacing:1px;color:#aaa}
-.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 12px}
-.cbox{background:#111;border:1.5px solid #00BFFF;border-radius:16px;padding:14px;text-align:center}
-.cbox .bl{color:#00BFFF;font-weight:800;font-size:13px}
-.fill{background:#00BFFF;color:#000;padding:13px;border-radius:24px;text-align:center;font-weight:900;margin:14px 12px}
-.form{background:#fff;margin:12px;border-radius:16px;padding:16px}
-.form h3{color:#000;font-weight:900;text-align:center;margin-bottom:12px}
-.form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;margin-bottom:10px;font-size:13px}
-.form button{width:100%;background:#000;color:#fff;padding:13px;border-radius:12px;border:none;font-weight:900}
-.white{background:#fff;border-radius:28px 28px 0 0;margin-top:12px;padding:16px 0 0}
-.about{background:#fff;color:#000;margin:0 12px;padding:18px;border-radius:16px;border:1px solid #eee}.about h2{font-size:17px;font-weight:900;margin-bottom:8px}.about p{font-size:13px;line-height:1.5;color:#222}
-.ttitle{color:#000;text-align:center;font-weight:900;margin:22px 0 12px}
-.tlist{padding:0 12px;display:grid;gap:10px}
-.tcard{background:#fff;color:#000;border:1px solid #eee;border-radius:16px;padding:14px;text-align:center}
-.foot{background:#fff;margin:14px 12px 0;padding:28px 16px;text-align:center;border-radius:16px 16px 0 0;border:1px solid #eee;border-bottom:0}
-.big{width:120px;height:120px;background:#000;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:50px;color:#fff}.big i{color:#00BFFF;font-style:normal}
-.sunder{font-weight:900;font-size:34px;color:#000;margin-top:12px}.sunder span{color:#00BFFF}.sub{font-size:10px;letter-spacing:3px;color:#888;margin-top:4px}
-.addr{background:#0a0a0a;border:1px solid #222;margin:0 12px;padding:16px;border-radius:16px;text-align:center;color:#fff}
-.map{margin:10px 12px 0;border-radius:16px;overflow:hidden;border:1px solid #e5e5e5}
-.copy{background:#fff;padding:12px;text-align:center;font-size:10px;color:#888}
+.top{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:15px 18px}
+.left{font-weight:900;font-size:26px;color:#000}.left b{color:#00BFFF}
+.right{width:42px;height:42px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:20px;border:2px solid #00BFFF}.right i{color:#00BFFF;font-style:normal}
+.hero{position:relative;background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200');background-size:cover;background-position:center;padding:60px 20px;text-align:center;color:#fff}
+.hero h1{font-weight:900;font-size:34px;line-height:0.95;letter-spacing:-1px}.hero h1 span{color:#00BFFF}.hero h1 .red{color:#FF3B30}
+.hero p{font-size:13px;color:#ccc;margin-top:12px;line-height:1.5}
 </style>
 </head>
 <body>
-<div class="top"><div class="logo">SANDI<b>X</b></div><div class="sc">S<i>X</i></div></div>
-<div class="black">
-<div class="hero"><h1>WEB<br>DEVELOPER<br>AND AI<br><span>AUTOMATION</span></h1><p>We build fast websites + AI chatbots that capture customers 24/7</p></div>
-<div class="sec">OUR SERVICES</div>
-<div class="grid">
-<div class="box"><b>🌐 Website Development</b><div>Super-fast, mobile-first websites that load in 2 seconds.</div></div>
-<div class="box"><b>🤖 AI Automation</b><div>AI that replies WhatsApp/IG, books & closes sales while you sleep.</div></div>
-<div class="box"><b>📈 Sales Funnels</b><div>High-converting funnels that turn cold traffic to paying customers.</div></div>
-<div class="box"><b>💬 AI Chatbot Setup</b><div>24/7 smart chatbot that captures leads and never misses sale.</div></div>
+<div class="top"><div class="left">SANDI<b>X</b></div><div class="right">S<i>X</i></div></div>
+<div class="hero">
+<h1>WEB DEVELOPER<br>AND AI<br><span>AUTOMATION</span><br><span class="red">AGENCY</span></h1>
+<p>SANDIX - We build websites & AI for your business</p>
 </div>
-<div class="ctitle">CONTACTS</div>
-<div class="cgrid">
-<div class="cbox" onclick="window.open('https://wa.me/2348100000000','_blank')"><div>💬</div><b>WhatsApp</b><div class="bl">Chat on<br>WhatsApp</div></div>
-<div class="cbox" onclick="window.open('https://t.me/sandixbot','_blank')"><div>🤖</div><b>Customer Service</b><div class="bl">Telegram Bot</div></div>
-</div>
-<div class="fill">📝 Fill Form To Order Below</div>
-<div class="form">
-<h3>ORDER FORM</h3>
-<input placeholder="Your Name">
-<input placeholder="Business Name">
-<input placeholder="WhatsApp Number">
-<select><option>Website Development - $120</option><option>AI Automation - $80</option><option>Sales Funnel - $100</option><option>AI Chatbot - $70</option><option>Full Package - $250</option></select>
-<textarea placeholder="Tell us about your business..."></textarea>
-<button onclick="window.open('https://wa.me/2348100000000?text=Hi%20SANDIX%20I%20want%20to%20order','_blank')">Submit Order Via WhatsApp</button>
-</div>
-</div>
-<div class="white">
-<div class="about">
-<h2>ABOUT SANDIX</h2>
-<p><b>SANDIX is long, strong, and friendly business</b> — Web Developer & AI Automation agency. Fast, clean, mobile-first websites + AI chatbots that capture customers 24/7.</p>
-<p style="margin-top:8px">Long in delivery, Strong in performance, Friendly in support - that's SANDIX!</p>
-</div>
-<div class="ttitle">CLIENT TESTIMONIES (9)</div>
-<div class="tlist">
-<div class="tcard"><div>★★★★★</div><b>Blessing - Salon Lagos</b><p>"Best $120 I spent!"</p></div>
-<div class="tcard"><div>★★★★★</div><b>Ahmed - Dubai</b><p>"AI bot replies at 2am. Wake up to sales!"</p></div>
-<div class="tcard"><div>★★★★★</div><b>Sarah - London</b><p>"Sales +70% in 2 weeks!"</p></div>
-<div class="tcard"><div>★★★★★</div><b>Mike - Texas Gym</b><p>"Lead capture is fire!"</p></div>
-<div class="tcard"><div>★★★★★</div><b>Chioma - Restaurant NG</b><p>"SANDIX delivered!"</p></div>
-<div class="tcard"><div>★★★★★</div><b>David - Canada</b><p>"Clients trust me more now!"</p></div>
-<div class="tcard"><div>★★★★★</div><b>Aisha - Abuja</b><p>"Game changer!"</p></div>
-<div class="tcard"><div>★★★★★</div><b>John - UK Barber</b><p>"Bookings doubled!"</p></div>
-<div class="tcard"><div>★★★★★</div><b>Fatima - UAE</b><p>"My store runs itself!"</p></div>
-</div>
-<div class="foot"><div class="big">S<i>X</i></div><div class="sunder">SANDI<span>X</span></div><div class="sub">WEB • AI • GLOBAL</div></div>
-<div class="addr"><div style="font-weight:900">📍 OUR ADDRESS</div><div style="font-weight:800;margin-top:6px">25 MTN Street Obafemi Ogun, Nigeria.</div><div style="font-size:11px;color:#aaa;margin-top:4px">We serve worldwide: Nigeria | UK | USA | UAE | Canada. 24/7 via WhatsApp & Telegram.</div></div>
-<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962!2d3.3!3d6.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a%2F!2sObafemi%20Ogun%20Nigeria!5e0!3m2!1sen!2sng!4v1" width="100%" height="250" style="border:0" loading="lazy"></iframe></div>
-<div class="copy">© 2026 SANDIX — Long • Strong • Friendly Business</div>
-</div>
-</body>
-                   </html>
+<div style="background
