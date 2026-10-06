@@ -45,15 +45,15 @@
 <style>
 .work-section{background:#0a0a0a;padding:35px 0 50px 0;width:100%;overflow:hidden}
 .work-title{text-align:center;color:#00bfff;font-size:23px;font-weight:900;margin-bottom:22px}
-.scroll-wrap{display:flex;flex-direction:row;flex-wrap:nowrap !important;overflow-x:auto !important;overflow-y:hidden;gap:14px;padding:10px 16px 24px 16px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;white-space:nowrap;width:100%;box-sizing:border-box}
-.scroll-wrap::-webkit-scrollbar{height:8px}
+.scroll-wrap{display:flex !important;flex-direction:row !important;flex-wrap:nowrap !important;overflow-x:scroll !important;overflow-y:hidden !important;gap:14px !important;padding:10px 16px 30px 16px !important;width:100% !important;justify-content:flex-start !important}
+.scroll-wrap::-webkit-scrollbar{height:8px;display:block !important}
 .scroll-wrap::-webkit-scrollbar-thumb{background:#00bfff;border-radius:10px}
-.scroll-wrap::-webkit-scrollbar-track{background:#111}
-.box{min-width:165px;max-width:165px;height:205px;border-radius:14px;overflow:hidden;position:relative;flex:0 0 165px !important;scroll-snap-align:start;cursor:pointer;border:1px solid #222;background:#111;display:inline-block;white-space:normal;vertical-align:top}
+.scroll-wrap::-webkit-scrollbar-track{background:#222;border-radius:10px}
+.box{min-width:165px !important;max-width:165px !important;height:205px !important;border-radius:14px !important;overflow:hidden !important;position:relative !important;flex:0 0 165px !important;cursor:pointer !important;border:1px solid #222 !important;background:#111 !important;flex-shrink:0 !important}
 .box img{width:100%;height:100%;object-fit:cover;display:block}
 .box-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.95));color:#fff;padding:30px 10px 10px 10px;font-size:12px;font-weight:700;text-transform:uppercase}
-.more-box{background:#000;border:2px solid #00bfff;display:flex;align-items:center;justify-content:center}
-.more-box span{color:#00bfff;font-weight:900;font-size:16px;text-align:center;line-height:1.2}
+.more-box{background:#000 !important;border:2px solid #00bfff !important;display:flex !important;align-items:center !important;justify-content:center !important;min-width:165px !important;max-width:165px !important;flex:0 0 165px !important}
+.more-box span{color:#00bfff;font-weight:900;font-size:15px;text-align:center;line-height:1.2}
 .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.88);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:15px}
 .lightbox img{width:96%;max-width:520px;max-height:52vh;object-fit:cover;border-radius:14px;border:2px solid #00bfff}
 .lightbox span{color:#fff;margin-top:18px;font-size:14px;border:1px solid #00bfff;padding:8px 28px;border-radius:20px;cursor:pointer;background:#111}
