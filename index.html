@@ -80,25 +80,57 @@
 function openBiz(el){document.getElementById('bizImg').src=el.querySelector('img').src.replace('w=800','w=1200');document.getElementById('bizName').innerText=el.querySelector('.biz-label').innerText;document.getElementById('bizLight').style.display='flex'}
 function closeBiz(){document.getElementById('bizLight').style.display='none'}
 </script>
-  <style>
-.about-sandix{background:#ffffff;padding:0 0 35px;text-align:center;color:#111}
-.about-sandix h2{color:#111;font-size:27px;font-weight:900;padding:45px 16px 10px}
-.about-sandix .brief{color:#555;font-size:15px;line-height:1.7;padding:0 18px 25px;max-width:620px;margin:0 auto}
-.about-hero{width:100%;height:420px;overflow:hidden;position:relative}
-.about-hero img{width:100%;height:100%;object-fit:cover}
-.about-hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom, transparent, #ffffff)}
-.accordion{max-width:700px;margin:25px auto 0;padding:0 16px;text-align:left}
-.acc-btn{width:100%;background:#111;color:#fff;padding:17px 18px;border:none;border-radius:12px;margin:12px 0 0;font-weight:900;font-size:14px;display:flex;justify-content:space-between;cursor:pointer}
-.acc-btn span{color:#00bfff;font-size:20px}
-.acc-content{display:none;padding:16px;background:#f5f5f5;border-radius:0 0 12px 12px;margin:0 0 12px;color:#333;font-size:14px;line-height:1.7;border:1px solid #eee;border-top:none}
+  <!-- STEP 3: ABOUT SANDIX - CLEAN PROFESSIONAL -->
+<style>
+.about-sandix{padding:0;background:#ffffff}
+.about-hero-bg{
+width:100%;
+min-height:520px;
+background:linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.60)), url('https://images.unsplash.com/photo-1531496730074-83b638c0a7ac?q=80&w=1200');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:50px 18px;
+}
+.about-hero-bg h2{color:#ffffff;font-size:30px;font-weight:900;letter-spacing:1px;margin-bottom:14px}
+.about-hero-bg h2 .blue-x{color:#00bfff}
+.about-hero-bg .brief{color:#e6e6e6;font-size:16px;line-height:1.8;max-width:620px}
+.accordion-wrap{background:#ffffff;padding:28px 16px 40px}
+.acc-btn{width:100%;max-width:700px;margin:14px auto 0;display:flex;justify-content:space-between;align-items:center;background:#111111;color:#ffffff;padding:18px 20px;border:none;border-radius:14px;font-weight:800;font-size:14px;letter-spacing:0.5px;cursor:pointer}
+.acc-btn .plus{color:#00bfff;font-size:22px}
+.acc-content{display:none;max-width:700px;margin:0 auto 14px;padding:18px 20px;background:#f7f7f7;border-radius:0 0 14px 14px;color:#333333;font-size:14.5px;line-height:1.8;border:1px solid #eeeeee;border-top:none}
 .acc-content.show{display:block}
-@media(min-width:768px){.about-hero{height:520px}}
+@media(min-width:768px){.about-hero-bg{min-height:580px}.about-hero-bg h2{font-size:38px}.about-hero-bg .brief{font-size:17px}}
 </style>
 
 <div class="about-sandix">
-<h2>ABOUT SANDIX</h2>
-<p class="brief">At SANDIX, we build powerful AI solutions that help businesses grow faster. We automate your sales, bookings, payments and customer support 24 hours without human effort.</p>
-
-<div class="about-hero">
-<img src="https://images.unsplash.com/photo-1531496730074-83b638c0a7ac?q=80&w=1200" alt="Someone working on a computer">
+<div class="about-hero-bg">
+<h2>ABOUT SANDI<span class="blue-x">X</span></h2>
+<p class="brief">At SANDIX, we build powerful AI solutions that help businesses grow faster. We automate your sales, bookings, payments and customer support 24 hours a day, without human effort, allowing you to focus on growth while your business operates efficiently.</p>
 </div>
+
+<div class="accordion-wrap">
+<button class="acc-btn" onclick="toggleAcc('vision')">OUR VISION <span class="plus">+</span></button>
+<div id="vision" class="acc-content">Our vision is to become the most trusted AI partner for businesses across Africa and beyond. We aim to empower hotels, boutiques, supermarkets, restaurants, salons, real estate and e-commerce brands to compete globally through affordable and intelligent automation.</div>
+
+<button class="acc-btn" onclick="toggleAcc('mission')">OUR MISSION <span class="plus">+</span></button>
+<div id="mission" class="acc-content">Our mission at SANDIX is to simplify business operations. We develop AI agents that handle orders, appointments, payments, customer inquiries and sales automatically, reducing operational costs and improving efficiency.</div>
+
+<button class="acc-btn" onclick="toggleAcc('value')">OUR VALUE <span class="plus">+</span></button>
+<div id="value" class="acc-content">At SANDIX, we are guided by innovation, integrity and customer success. We are committed to delivering reliable, affordable and flexible solutions that are tailored to meet the real needs of your business and support long-term growth.</div>
+</div>
+</div>
+
+<script>
+function toggleAcc(id){
+var el=document.getElementById(id);
+var was=el.classList.contains('show');
+document.querySelectorAll('.acc-content').forEach(function(c){c.classList.remove('show')});
+if(!was) el.classList.add('show');
+}
+</script>
+<!-- END STEP 3 -->
