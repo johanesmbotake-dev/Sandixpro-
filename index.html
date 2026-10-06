@@ -53,7 +53,7 @@
 .box img{width:100%;height:100%;object-fit:cover;display:block}
 .box-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.95));color:#fff;padding:30px 10px 10px 10px;font-size:12px;font-weight:700;text-transform:uppercase}
 .more-box{background:#000;border:2px solid #00bfff;display:flex;align-items:center;justify-content:center}
-.more-box span{color:#00bfff;font-weight:900;font-size:15px;text-align:center}
+.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:15px}.lightbox img{width:96%;max-width:550px;max-height:65vh;object-fit:cover;border-radius:14px;border:2px solid #00bfff}.lightbox span{color:#fff;margin-top:20px;font-size:14px;border:1px solid #00bfff;padding:10px 32px;border-radius:25px;cursor:pointer;background:#111}
 </style>
 
 <div class="work-title">WE ARE FLEXIBLE</div>
@@ -61,12 +61,12 @@
 <div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400"><div class="box-label">BOUTIQUE</div></div>
 <div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=400"><div class="box-label">SUPERMARKET</div></div>
 <div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400"><div class="box-label">COMPANY</div></div>
-<div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1503673326346-39cc5dc4b5c5?w=400"><div class="box-label">SCHOOLS</div></div>
+<div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400"><div class="box-label">SCHOOLS</div></div>
 <div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=400"><div class="box-label">CONTENT CREATORS</div></div>
 <div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400"><div class="box-label">REAL ESTATE</div></div>
 <div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400"><div class="box-label">HOTELS</div></div>
 <div class="box" onclick="openLight(this)"><img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=400"><div class="box-label">E-COMMERCE</div></div>
-<div class="box more-box" onclick="window.open('https://wa.me/2340000000000','_blank')"><span>AND<br>MORE...</span></div>
+<div class="box more-box"><span>AND<br>MORE...</span></div>
 </div>
 </div>
 <script>
