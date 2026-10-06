@@ -80,7 +80,7 @@
 function openBiz(el){document.getElementById('bizImg').src=el.querySelector('img').src.replace('w=800','w=1200');document.getElementById('bizName').innerText=el.querySelector('.biz-label').innerText;document.getElementById('bizLight').style.display='flex'}
 function closeBiz(){document.getElementById('bizLight').style.display='none'}
 </script>
-<!-- STEP 3: ABOUT SANDIX - 100% CLICKABLE + FULL SCREEN + BIG TYPO + TICK BLUE -->
+<!-- STEP 3: ABOUT SANDIX - 100% CLICKABLE NO JS - TICK BLUE + BIG TYPO + FULL SCREEN -->
 <style>
 .about-sandix{padding:0;background:#ffffff;margin:0;width:100%;overflow-x:hidden}
 .about-hero-bg{
@@ -90,17 +90,19 @@ background-size:cover;background-position:center;
 display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:50px 18px;
 }
 .about-hero-bg h2{color:#ffffff;font-size:34px;font-weight:900;margin-bottom:14px}
-.about-hero-bg h2 .blue-x{color:#00BFFF}
-.about-hero-bg .brief{color:#e6e6e6;font-size:16.5px;line-height:1.8;max-width:680px}
-.accordion-wrap{background:#ffffff;padding:22px 16px 50px;max-width:720px;margin:0 auto;position:relative;z-index:5}
-.acc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;background:#f8f9fa !important;color:#111 !important;padding:18px 20px;border:1px solid #e9ecef !important;font-weight:900;font-size:15px;letter-spacing:1px;cursor:pointer !important;border-radius:12px;margin:14px auto;text-transform:uppercase;position:relative;z-index:10;pointer-events:auto !important}
-.acc-btn .plus{color:#00BFFF;font-size:26px;font-weight:900;pointer-events:none}
-.acc-content{display:none;width:100vw;margin-left:calc(-50vw + 50%);box-sizing:border-box;min-height:280px}
-.acc-inner{max-width:720px;margin:0 auto;padding:40px 22px;font-size:16px;line-height:2;text-align:left;box-sizing:border-box}
+.about-hero-bg h2.blue-x{color:#00BFFF}
+.about-hero-bg.brief{color:#e6e6e6;font-size:16.5px;line-height:1.8;max-width:680px}
+.accordion-wrap{background:#ffffff;padding:22px 16px 50px;max-width:720px;margin:0 auto}
+.acc-item{margin:14px 0;border-radius:12px;overflow:hidden;border:1px solid #e9ecef}
+.acc-item summary{list-style:none;display:flex;justify-content:space-between;align-items:center;background:#f8f9fa;color:#111;padding:18px 20px;font-weight:900;font-size:15px;letter-spacing:1px;cursor:pointer;text-transform:uppercase;-webkit-tap-highlight-color:transparent}
+.acc-item summary::-webkit-details-marker{display:none}
+.acc-item summary.plus{color:#00BFFF;font-size:26px;font-weight:900;transition:transform 0.2s}
+.acc-item[open] summary.plus{transform:rotate(45deg)}
+.acc-content{width:100vw;margin-left:calc(-50vw + 50%);box-sizing:border-box;min-height:280px;display:block}
+.acc-inner{max-width:720px;margin:0 auto;padding:40px 22px;font-size:16px;line-height:2;text-align:left}
 #vision{background:#00BFFF;color:#ffffff}
 #mission{background:#ff7b7b;color:#ffffff}
 #value{background:#ffffff;color:#1a1a1a;background-image:radial-gradient(#cbd5e1 1.8px, transparent 1.8px), linear-gradient(rgba(203,213,225,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(203,213,225,0.4) 1px, transparent 1px);background-size:30px 30px, 30px 30px, 30px 30px;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0}
-.acc-content.open{display:block !important}
 .acc-inner b{font-size:24px;font-weight:900;display:block;margin-bottom:16px;line-height:1.3}
 </style>
 
@@ -112,20 +114,20 @@ display:flex;flex-direction:column;justify-content:center;align-items:center;tex
 
 <div class="accordion-wrap">
 
-<button type="button" class="acc-btn" onclick="window.toggleAcc('vision', this)"><span>OUR VISION</span> <span class="plus">+</span></button>
+<details class="acc-item">
+<summary>OUR VISION <span class="plus">+</span></summary>
 <div id="vision" class="acc-content"><div class="acc-inner"><b>Building Africa's Leading Website & AI Business Platform</b>Our vision is to become the most trusted partner for professional website design and AI automation across Africa and beyond. We believe every business deserves a world-class website that looks premium on mobile and desktop, ranks on Google, loads fast, and sells for you. Combined with affordable AI automation that handles inquiries and sales 24/7, we empower small businesses to compete globally.</div></div>
+</details>
 
-<button type="button" class="acc-btn" onclick="window.toggleAcc('mission', this)"><span>OUR MISSION</span> <span class="plus">+</span></button>
+<details class="acc-item">
+<summary>OUR MISSION <span class="plus">+</span></summary>
 <div id="mission" class="acc-content"><div class="acc-inner"><b>Making Business Growth Simple With Professional Websites & Automation</b>Our mission at SANDIX is to simplify growth. First, we build you a fast, modern, SEO-ready website with booking system, online store, payment integration and WhatsApp integration. Second, we add intelligent AI agents that handle customer inquiries, take orders, book appointments, process payments and confirm reservations automatically.</div></div>
+</details>
 
-<button type="button" class="acc-btn" onclick="window.toggleAcc('value', this)"><span>OUR VALUE</span> <span class="plus">+</span></button>
+<details class="acc-item">
+<summary>OUR VALUE <span class="plus">+</span></summary>
 <div id="value" class="acc-content"><div class="acc-inner"><b>Innovation, Integrity and Customer Success</b>At SANDIX, whether it's a premium website or smart automation, we are guided by innovation, integrity and customer success. We build secure, scalable, mobile-first websites and flexible AI solutions that keep your business ahead. We stay honest, deliver on time, give you full ownership, provide support, and we measure our growth by your success.</div></div>
+</details>
 
 </div>
 </div>
-
-<script>
-window.toggleAcc = function(id, btn){
-console.log("Clicked " + id);
-var el = document.getElementById(id);
-if(!el
