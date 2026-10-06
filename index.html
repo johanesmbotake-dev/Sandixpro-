@@ -80,13 +80,13 @@
 function openBiz(el){document.getElementById('bizImg').src=el.querySelector('img').src.replace('w=800','w=1200');document.getElementById('bizName').innerText=el.querySelector('.biz-label').innerText;document.getElementById('bizLight').style.display='flex'}
 function closeBiz(){document.getElementById('bizLight').style.display='none'}
 </script>
-  <!-- STEP 3: ABOUT SANDIX - CLEAN PROFESSIONAL -->
+<!-- STEP 3: ABOUT SANDIX - FULL COMPLETE -->
 <style>
 .about-sandix{padding:0;background:#ffffff}
 .about-hero-bg{
 width:100%;
 min-height:520px;
-background:linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.60)), url('https://images.unsplash.com/photo-1531496730074-83b638c0a7ac?q=80&w=1200');
+background:linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1531496730074-83b638c0a7ac?q=80&w=1200');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -100,9 +100,18 @@ padding:50px 18px;
 .about-hero-bg h2 .blue-x{color:#00bfff}
 .about-hero-bg .brief{color:#e6e6e6;font-size:16px;line-height:1.8;max-width:620px}
 .accordion-wrap{background:#ffffff;padding:28px 16px 40px}
-.acc-btn{width:100%;max-width:700px;margin:14px auto 0;display:flex;justify-content:space-between;align-items:center;background:#111111;color:#ffffff;padding:18px 20px;border:none;border-radius:14px;font-weight:800;font-size:14px;letter-spacing:0.5px;cursor:pointer}
+.acc-btn{width:100%;max-width:700px;margin:14px auto 0;display:flex;justify-content:space-between;align-items:center;background:#2f3640;color:#ffffff;padding:18px 20px;border:1px solid #424a57;border-radius:14px;font-weight:800;font-size:14px;letter-spacing:0.5px;cursor:pointer}
 .acc-btn .plus{color:#00bfff;font-size:22px}
-.acc-content{display:none;max-width:700px;margin:0 auto 14px;padding:18px 20px;background:#f7f7f7;border-radius:0 0 14px 14px;color:#333333;font-size:14.5px;line-height:1.8;border:1px solid #eeeeee;border-top:none}
+.acc-content{display:none;max-width:700px;margin:0 auto 14px;padding:22px 20px;border-radius:0 0 14px 14px;font-size:14.5px;line-height:1.8}
+#vision.acc-content{background:#0a84ff;color:#ffffff;border-radius:0 0 14px 14px}
+#mission.acc-content{background:#d90429;color:#ffffff;border-radius:0 0 14px 14px}
+#value.acc-content{
+background-color:#ffffff;
+background-image:radial-gradient(#cbd5e1 1.5px, transparent 1.5px), linear-gradient(rgba(203,213,225,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(203,213,225,0.35) 1px, transparent 1px);
+background-size:28px 28px, 28px 28px, 28px 28px;
+color:#1a1a1a;
+border:1px solid #e2e8f0;
+}
 .acc-content.show{display:block}
 @media(min-width:768px){.about-hero-bg{min-height:580px}.about-hero-bg h2{font-size:38px}.about-hero-bg .brief{font-size:17px}}
 </style>
@@ -114,23 +123,5 @@ padding:50px 18px;
 </div>
 
 <div class="accordion-wrap">
-<button class="acc-btn" onclick="toggleAcc('vision')">OUR VISION <span class="plus">+</span></button>
-<div id="vision" class="acc-content">Our vision is to become the most trusted AI partner for businesses across Africa and beyond. We aim to empower hotels, boutiques, supermarkets, restaurants, salons, real estate and e-commerce brands to compete globally through affordable and intelligent automation.</div>
-
-<button class="acc-btn" onclick="toggleAcc('mission')">OUR MISSION <span class="plus">+</span></button>
-<div id="mission" class="acc-content">Our mission at SANDIX is to simplify business operations. We develop AI agents that handle orders, appointments, payments, customer inquiries and sales automatically, reducing operational costs and improving efficiency.</div>
-
-<button class="acc-btn" onclick="toggleAcc('value')">OUR VALUE <span class="plus">+</span></button>
-<div id="value" class="acc-content">At SANDIX, we are guided by innovation, integrity and customer success. We are committed to delivering reliable, affordable and flexible solutions that are tailored to meet the real needs of your business and support long-term growth.</div>
-</div>
-</div>
-
-<script>
-function toggleAcc(id){
-var el=document.getElementById(id);
-var was=el.classList.contains('show');
-document.querySelectorAll('.acc-content').forEach(function(c){c.classList.remove('show')});
-if(!was) el.classList.add('show');
-}
-</script>
-<!-- END STEP 3 -->
+<button type="button" class="acc-btn" onclick="toggleAcc('vision')">OUR VISION <span class="plus">+</span></button>
+<div id="vision" class="acc-content"><b>Building Africa's Leading AI Business Platform</b><br><br>Our vision is to become the most trusted AI partner for businesses across Africa and beyond. We aim to empower hotels, boutiques, supermarkets, restaurants, salons, real
