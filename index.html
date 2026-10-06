@@ -44,15 +44,16 @@
 <div class="work-section">
 <style>
 .work-section{background:#0a0a0a;padding:35px 0 50px 0;width:100%;overflow:hidden}
-.work-title{text-align:center;color:#00bfff;font-size:23px;font-weight:900;margin-bottom:22px;text-transform:uppercase}
+.work-title{text-align:center;color:#00bfff;font-size:23px;font-weight:900;margin-bottom:22px;letter-spacing:1px}
 .scroll-wrap{display:flex;flex-wrap:nowrap;overflow-x:scroll;overflow-y:hidden;gap:14px;padding:10px 16px 24px 16px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;cursor:grab}
-.scroll-wrap:active{cursor:grabbing}
-.scroll-wrap::-webkit-scrollbar{height:8px;display:block}
-.scroll-wrap::-webkit-scrollbar-track{background:#111}
+.scroll-wrap::-webkit-scrollbar{height:8px}
 .scroll-wrap::-webkit-scrollbar-thumb{background:#00bfff;border-radius:10px}
-.box{min-width:165px;max-width:165px;height:205px;border-radius:14px;overflow:hidden;position:relative;flex:0 0 165px;scroll-snap-align:start;cursor:pointer;border:1px solid #222}
-.box img{width:100%;height:100%;object-fit:cover}
+.scroll-wrap::-webkit-scrollbar-track{background:#111}
+.box{min-width:165px;max-width:165px;height:205px;border-radius:14px;overflow:hidden;position:relative;flex:0 0 165px;scroll-snap-align:start;cursor:pointer;border:1px solid #222;background:#111}
+.box img{width:100%;height:100%;object-fit:cover;display:block}
 .box-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.9));color:#fff;padding:30px 10px 10px 10px;font-size:12px;font-weight:700;text-transform:uppercase}
+.more-box{background:#000;border:2px solid #00bfff;display:flex;align-items:center;justify-content:center;text-align:center}
+.more-box span{color:#00bfff;font-weight:900;font-size:16px;line-height:1.2}
 .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.88);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:15px}
 .lightbox img{width:96%;max-width:520px;height:auto;max-height:52vh;object-fit:cover;border-radius:14px;border:2px solid #00bfff}
 .lightbox span{color:#fff;margin-top:18px;font-size:14px;border:1px solid #00bfff;padding:8px 28px;border-radius:20px;cursor:pointer;background:#111}
@@ -60,29 +61,39 @@
 
 <div class="work-title">WE ARE FLEXIBLE</div>
 
-<div class="scroll-wrap" id="scrollBox">
+<div class="scroll-wrap">
 
 <div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=400&q=80"><div class="box-label">Boutique</div></div>
-<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=400&q=80"><div class="box-label">Supermarket</div></div>
-<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1497366811353-26cc3f34faef?auto=format&fit=crop&w=400&q=80"><div class="box-label">Company</div></div>
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=80"><div class="box-label">Supermarket</div></div>
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&q=80"><div class="box-label">Company</div></div>
+
 <div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=400&q=80"><div class="box-label">Schools</div></div>
+
 <div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=400&q=80"><div class="box-label">Content Creators</div></div>
-<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=400&q=80"><div class="box-label">Real Estate</div></div>
-<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1436397543931-01c1a35453ef?auto=format&fit=crop&w=400&q=80"><div class="box-label">Church</div></div>
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80"><div class="box-label">Real Estate</div></div>
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1507692049790-de582271b56b?auto=format&fit=crop&w=400&q=80"><div class="box-label">Church</div></div>
+
 <div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=80"><div class="box-label">Laptop Work</div></div>
+
+<div class="box more-box"><span>AND MANY<br>MORE</span></div>
 
 </div>
 
 <div class="lightbox" id="lightbox" onclick="closeView()"><img id="lightImg" src=""><span>Close</span></div>
 
 <script>
-function openView(el){document.getElementById('lightImg').src=el.querySelector('img').src;document.getElementById('lightbox').style.display='flex';}
+function openView(el){
+if(el.classList.contains('more-box')) return;
+var img=el.querySelector('img');
+if(!img) return;
+document.getElementById('lightImg').src=img.src;
+document.getElementById('lightbox').style.display='flex';
+}
 function closeView(){document.getElementById('lightbox').style.display='none';}
-let isDown=false,startX,scrollLeft;const slider=document.getElementById('scrollBox');
-slider.addEventListener('mousedown',e=>{isDown=true;startX=e.pageX-slider.offsetLeft;scrollLeft=slider.scrollLeft;});
-slider.addEventListener('mouseleave',()=>{isDown=false;});
-slider.addEventListener('mouseup',()=>{isDown=false;});
-slider.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();const x=e.pageX-slider.offsetLeft;const walk=(x-startX)*2;slider.scrollLeft=scrollLeft-walk;});
 </script>
 
 </div>
