@@ -41,5 +41,60 @@
 <div class="sub-price">From $150</div>
 
 </div>
-</body>
-</html>
+<div class="work-section">
+<style>
+.work-section{background:#0a0a0a;padding:40px 0 50px 0}
+.work-title{text-align:center;color:#00bfff;font-size:22px;font-weight:900;margin-bottom:5px;text-transform:uppercase}
+.work-sub{text-align:center;color:#999;font-size:13px;margin-bottom:20px}
+.scroll-wrap{display:flex;overflow-x:auto;gap:14px;padding:10px 16px 20px 16px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.scroll-wrap::-webkit-scrollbar{height:6px}
+.scroll-wrap::-webkit-scrollbar-thumb{background:#00bfff;border-radius:10px}
+.box{min-width:160px;max-width:160px;height:200px;border-radius:14px;overflow:hidden;position:relative;flex-shrink:0;scroll-snap-align:start;cursor:pointer;border:1px solid #222}
+.box img{width:100%;height:100%;object-fit:cover;transition:0.3s}
+.box:hover img{transform:scale(1.1)}
+.box-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.9));color:#fff;padding:30px 10px 10px 10px;font-size:12px;font-weight:700;text-transform:uppercase}
+.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:20px}
+.lightbox img{max-width:95%;max-height:80%;border-radius:10px;border:2px solid #00bfff}
+.lightbox span{color:#fff;margin-top:15px;font-size:14px;border:1px solid #00bfff;padding:8px 20px;border-radius:20px;cursor:pointer}
+</style>
+
+<div class="work-title">PROJECTS WE BUILD</div>
+<div class="work-sub">Scroll left to right — Click to view</div>
+
+<div class="scroll-wrap" id="scrollWrap">
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=400&q=80"><div class="box-label">Boutique Store</div></div>
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=400&q=80"><div class="box-label">Supermarket</div></div>
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1497366811353-26cc3f34faef?auto=format&fit=crop&w=400&q=80"><div class="box-label">Company</div></div>
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=400&q=80"><div class="box-label">Schools</div></div>
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=400&q=80"><div class="box-label">Content Creators</div></div>
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=400&q=80"><div class="box-label">Real Estate</div></div>
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=400&q=80"><div class="box-label">Restaurant</div></div>
+
+<div class="box" onclick="openView(this)"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=400&q=80"><div class="box-label">Salon & Gym</div></div>
+
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeView()">
+<img id="lightImg" src="">
+<span>Close View</span>
+</div>
+
+<script>
+function openView(el){
+var src=el.querySelector('img').src;
+document.getElementById('lightImg').src=src;
+document.getElementById('lightbox').style.display='flex';
+}
+function closeView(){
+document.getElementById('lightbox').style.display='none';
+}
+</script>
+
+</div>
