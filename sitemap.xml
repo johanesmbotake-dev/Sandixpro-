@@ -3,18 +3,7 @@
   <url>
     <loc>https://sandixpro.vercel.app/</loc>
     <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://sandixpro.vercel.app/#services</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sandixpro.vercel.app/#projects</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sandixpro.vercel.app/#contact</loc>
-    <priority>0.8</priority>
   </url>
 </urlset>
